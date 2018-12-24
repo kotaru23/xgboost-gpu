@@ -74,6 +74,7 @@ RUN pip3 install --no-cache-dir \
     imbalanced-learn \
     h5py \
     joblib \
+    tqdm \
     click
 
 WORKDIR /apps
