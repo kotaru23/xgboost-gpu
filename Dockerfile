@@ -1,6 +1,4 @@
-FROM python:3.6.7 as python
-
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
 MAINTAINER kotaru23
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -10,6 +8,7 @@ RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get install -y \
     git \
+    python3 \
     build-essential \
     libreadline-dev \
     libsqlite3-dev \
@@ -25,10 +24,6 @@ RUN apt-get update -y && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
-COPY --from=python /usr/local/src /usr/local
-COPY --from=python /usr/local/include /usr/local
-COPY --from=python /usr/local/bin /usr/local
-COPY --from=python /usr/local/lib /usr/local
 
 RUN pip3 install --no-cache-dir \
     numpy \
