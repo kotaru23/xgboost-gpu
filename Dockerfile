@@ -9,6 +9,7 @@ RUN apt-get update -y && \
     apt-get install -y \
     git \
     python3 \
+    python3-pip \
     build-essential \
     libreadline-dev \
     libsqlite3-dev \
