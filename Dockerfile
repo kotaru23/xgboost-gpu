@@ -20,10 +20,13 @@ RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get install -y \
     git \
-    openssl \
     build-essential \
     libreadline-dev \
     libsqlite3-dev \
+    libssl-dev \
+    zlib1g-dev \
+    libbz2-dev \
+    xz-utils \
     wget \
     llvm \
     libncurses5-dev \
