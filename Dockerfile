@@ -52,6 +52,7 @@ RUN pip3 install --no-cache-dir \
     numpy \
     scipy \
     scikit-learn \
+    pandas \
     xgboost \
     imbalanced-learn \
     h5py \
